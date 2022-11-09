@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY ACCOUNT</title>
+       {% load static %}
+    <link rel="stylesheet"  href="{% static 'library_website/styleMyAccount.css' %}"/>
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div class="toprow" id="header">
+          <b>Member (member username）- Detailed view</b>
+        </div>
+        <div class="rowbreak"></div>
+        <!--Don't touch this row-->
+        <div class="bottomrow" id="overview">
+          <div class="section">
+              <div class="key">
+                  Loans
+              </div>
+              <div class="value">
+                  (member's loans)
+              </div>
+          </div>
+          <div class="section">
+            <div class="key">
+                Reservations
+            </div>
+            <div class="value">
+                (member's reservations)
+            </div>
+
+          </div>
+          <div class="section">Unpaid Fines</div>
+        </div>
+      </div>
+
+      <div class="colbreak"></div>
+
+      <div class="column right">
+        <div class="toprow">
+          <button
+            class="myAccount"
+            id="myAccountButton"
+            onclick="document.location='myAccount'"
+          >
+            MY ACCOUNT
+          </button>
+          <br />
+        </div>
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+          <center>
+            <a href="/">Search for books</a>
+          </center>
+      </div>
+    </div>
+  </body>
+</html>

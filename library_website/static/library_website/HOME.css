@@ -1,0 +1,86 @@
+* {
+  font-family: calibri;
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-image: url("./images/background_darkened.png");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+}
+
+.buttons {
+  text-align: right;
+  padding: none;
+  height: 40px;
+}
+
+#adminLoginButton,
+#memberLoginButton,
+#signUpButton,
+#myAccountButton,
+#logOutButton {
+  font-size: large;
+  height: 100%;
+  width: 120px;
+  background-color: rgb(138, 112, 64);
+  cursor: pointer;
+  border: none;
+}
+
+#bigHeader {
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+#smallHeader {
+  font-size: 40px;
+}
+
+#searchSection {
+  font-size: 40px;
+  height: 50px;
+  align-items: center;
+}
+
+input {
+  position: relative;
+  display: inline-block;
+  font-size: 20px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  height: 50px;
+}
+
+input[type="text"] {
+  background: aliceblue;
+  width: 500px;
+  height: 50px;
+  border: none;
+  padding: 2px;
+  border-radius: 25px 0 0 25px;
+  color: black;
+}
+
+#submitbutton {
+  /*for some reason i CANT change the height of this search button*/
+  position: relative;
+  background: rgb(138, 112, 64);
+  width: 100px;
+  height: 50px;
+  border: none;
+  padding: 2px;
+  border-radius: 0 25px 25px 0;
+  cursor: pointer;
+  font-size: large;
+}
+
+#searchButton {
+  height: 100%;
+}

@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  font-family: calibri;
+}
+
+.left {
+  float: left;
+  width: 80%;
+  padding: 5px;
+}
+
+.right {
+  float: right;
+  width: 20%;
+  padding: 5px;
+}
+
+.rowbreak {
+  height: 5px;
+}
+
+.toprow {
+  background-color: lightcoral;
+  height: 50px;
+  width: 100%;
+}
+
+.bottomrow {
+  background-color: lightblue;
+  height: 400px;
+  width: 100%;
+  padding: 10px;
+}
+
+.section {
+  display: flex;
+  flex-direction: row;
+  height: 33%;
+  padding: 10px;
+}
+
+#header {
+  padding: 10px;
+  font-size: larger;
+}
+
+#myAccountButton {
+  height: 50px;
+  width: 100%;
+}

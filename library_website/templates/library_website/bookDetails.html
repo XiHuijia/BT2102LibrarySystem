@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+     {% load static %}
+    <link rel="stylesheet" href="{% static 'library_website/styleBookDetails.css' %}" />
+  </head>
+
+  <body>
+    <div class="two_col_layout">
+      <div class="left_col">
+        <h1 id="bookTitle">Book Title:</h1>
+        <div>Book ID (ISBN):</div>
+        <div>Author:</div>
+        <div>Availability:</div>
+        <div>Expected Due Date:</div>
+        <div>Publisher:</div>
+        <div>Published date:</div>
+
+        <!--reserve function-->
+        <button id="reserveButton" class="reserveBorrow">RESERVE</button>
+
+        <!--borrow function-->
+        <button id="borrowButton" class="reserveBorrow">BORROW</button>
+      </div>
+
+      <div class="right_col">
+        <button
+          class="myAccount"
+          id="myAccountButton"
+          onclick="document.location='myAccount'"
+        >
+          MY ACCOUNT
+        </button>
+        <br />
+        <a href="/">Search for books</a>
+      </div>
+    </div>
+  </body>
+</html>

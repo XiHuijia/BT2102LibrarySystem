@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static 'library_website/HOME.css' %}"
+    />
+  </head>
+  <body>
+    <div class="buttons">
+      {% if user.is_authenticated %}
+      <button id="myAccountButton" onclick="document.location='myAccount'">
+        MY ACCOUNT
+      </button>
+      <form action="logout" method="POST">
+        {% csrf_token %}
+        <button id="logOutButton" type="submit" >LOGOUT</button>
+      </form>
+      {% else %}
+      <button id="adminLoginButton" onclick="document.location='adminLoginPage'" style="width: 200px">
+        ADMIN LOGIN
+      </button>
+
+      <button id="memberLoginButton" onclick="document.location='memberLogIn'">
+        LOGIN
+      </button>
+      <button id="signUpButton" onclick="document.location='signUp'">
+        SIGN UP
+      </button>
+      {% endif %}
+    </div>
+    <div id="bigHeader">LIBRARY</div>
+    <div id="smallHeader">Search for books here</div>
+    <div id="searchSection">
+      <center>
+        <form method="POST">
+          {% csrf_token %}
+          <input
+            id="searchBox"
+            type="text"
+            name="search"
+            placeholder="Search for books"
+          />
+          <button id="submitbutton" class="button" type="submit">Search</button>
+        </form>
+      </center>
+    </div>
+ <div class= "queryResult" id="queryResult"  >
+	<p>{{data}}</p>
+    {% for filter in listOfFilter %}
+              <p id="searchByFilter">{{filter}}</p>
+   {% endfor%}
+</div>
+  </body>
+</html>

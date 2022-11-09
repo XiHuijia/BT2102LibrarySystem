@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset= "utf-8">
+		<title>
+			Library System
+		</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="{% static 'library_website/style.css' %}">
+
+	</head>
+
+	<body>
+
+		<div class = "LogIn" id = "LogIn">
+
+<!--				<button class = "logInButton" onclick="onClickLogIn()">Log In</button>-->
+			<a href="memberLogIn" class = "logInButton" >Log In</a>
+<!--				<button class = "signUpButton" onclick="onClickSignUp()">Sign Up</button>-->
+				<a class = "signUpButton" href="signUp">Sign Up</a>
+		</div>
+
+ <div class = "buttons", id = "buttons">
+        <button
+        id="myAccountButton"
+        onclick="document.location='myAccount'"
+          >
+            MY ACCOUNT
+          </button>
+        <button
+            id="logOutButton"
+            onclick="document.location='website'"
+        >
+            LOG OUT
+        </button>
+    </div>
+
+		<div class = "Univeristy_Heading" id = "Univeristy_Heading">
+				<p> National University of Singapore </p> 
+		</div>
+
+		<div class = "Search_Book" id = "Search_Book">
+				<p> Search For Book </p> 
+		</div>
+
+		<div class = "Search_Book_Box" id = "Search_Book_Box">
+			<form method = "post" >
+				{% csrf_token %}
+				<input id = "Search_Book_BoxContainer" type="text" placeholder="Search for books" name="search">
+				<button class = "button" type="submit" >Search</button>
+			</form>
+
+		</div>
+
+	</body>
+
+</html>

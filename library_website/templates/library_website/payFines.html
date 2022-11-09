@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pay fines</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'library_website/stylePayFines.css' %}"
+    />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div id="paymentMessage"><b>{{paymentMessage}}</b></div>
+        <div class="toprow" id="header">
+          <b>Member (put member username here）- Outstanding Fines</b>
+        </div>
+        <div class="rowbreak"></div>
+
+        <div class="bottomrow">
+          <div id="fineSection">
+            <div id="finesAccumulated"><b>Fines Accumulated</b></div>
+            <div id="totalFines">{{totalFines}}</div>
+          </div>
+          <div id="paymentSection">
+            <div id="paymentMethods"><b>Payment method</b></div>
+            <div id="visadiv">
+              <button class="paymenticon">
+                <img
+                  id="visa"
+                  src="{% static 'library_website/images/visa_icon.png' %}"
+                />
+              </button>
+              <div class="rhs">
+                <form method="POST">
+                  {% csrf_token %}
+                  <input
+                    id="visaPaymentBox"
+                    class="box"
+                    type="text"
+                    name="visaPayment"
+                    placeholder="Enter the amount you want to pay"
+                  />
+                  <button class="paybutton" type="submit">
+                    Make Payment Now
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            <div id="mastercarddiv">
+              <button class="paymenticon">
+                <img
+                  id="mastercard"
+                  src="{% static 'library_website/images/mc_icon.png' %}"
+                />
+              </button>
+
+              <div class="rhs">
+                <form method="POST">
+                  {% csrf_token %}
+                  <input
+                    id="mastercardPaymentBox"
+                    class="box"
+                    type="text"
+                    name="mastercardPayment"
+                    placeholder="Enter the amount you want to pay"
+                  />
+                  <button class="paybutton" type="submit">
+                    Make Payment Now
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colbreak"></div>
+
+    <div class="column right">
+      <div class="toprow">
+        <button
+          class="buttons"
+          id="myAccountButton"
+          onclick="document.location='myAccount'"
+        >
+          MY ACCOUNT
+        </button>
+        <br />
+      </div>
+      <div class="rowbreak"></div>
+      <div class="bottomrow">
+        <center>
+          <a href="/">Search for books</a>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book not found</title>
+    {% load static %}
+    <link rel="stylesheet"  href="{% static 'library_website/styleFinesPaid.css' %}" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div class="toprow" id="header"><b>Member (put member username here) - Fines paid</b></div>
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+          <p>Thank you for paying</p>
+          <div id="finesAccumulated"><b>Outstanding Fines</b></div>
+          <div id="totalFines">{{totalFines}}</div>
+</div>
+      </div>
+
+      <div class="colbreak"></div>
+
+      <div class="column right">
+        <div class="toprow">
+          <button
+            class="buttons"
+            id="myAccountButton"
+            onclick="document.location='myAccount'"
+          >
+            MY ACCOUNT
+          </button>
+          <br />
+        </div>
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+          <center>
+            <a href="/">Search for books</a>
+          </center>
+      </div>
+    </div>
+  </body>
+</html>

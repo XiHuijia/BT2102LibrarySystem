@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  font-family: calibri;
+  color: white;
+}
+
+body {
+  background-image: url("./images/background_darkened.png");
+  height: auto;
+  background-repeat: repeat-y;
+  background-size: cover;
+  padding: 0px;
+}
+
+.left {
+  float: left;
+  width: 80%;
+  padding: 5px;
+}
+
+.right {
+  float: right;
+  width: 20%;
+  padding: 5px;
+}
+
+.rowbreak {
+  height: 5px;
+}
+.buttons {
+  width: 33%;
+}
+
+.toprow {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 80px;
+  width: 100%;
+}
+
+.bottomrow {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* height: 400px; */
+  width: 100%;
+  padding: 10px;
+  font-size: large;
+  background-size: contain;
+}
+
+.tableheader {
+  width: 40%;
+}
+
+.bookIDTABLE {
+  width: 5%;
+}
+
+#detailsTable {
+  width: 100%;
+  height: 100%;
+}
+#header {
+  font-size: larger;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+}
+
+.buttons {
+  height: 50px;
+  width: 100%;
+  border: none;
+  background-color: rgb(138, 112, 64);
+  font-size: large;
+}
+
+#myAccountButton {
+  height: 100%;
+  width: 100%;
+  font-size: larger;
+}
+
+#payFinesButton {
+  font-size: large;
+}
+
+#cancelReservationBox,
+#returnBookBox,
+#extendReservationBox,
+#statement {
+  font-size: large;
+  width: 100%;
+  height: 30px;
+  text-align: center;
+}
+
+.box {
+  color: black;
+}
+
+#bookID {
+  text-align: center;
+}
+
+.cell {
+  vertical-align: top;
+}

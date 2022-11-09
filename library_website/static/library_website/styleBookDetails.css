@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+.two_col_layout {
+  font-family: Calibri;
+  font-size: large;
+}
+.left_col {
+  float: left;
+  width: 79%;
+  height: 500px;
+  padding: 10px;
+  background-color: lightskyblue;
+}
+
+.right_col {
+  float: right;
+  width: 20%;
+  height: 500px;
+  padding: 10px;
+  background-color: lightpink;
+}

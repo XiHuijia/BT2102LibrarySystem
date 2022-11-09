@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADMIN LOGIN PAGE</title>
+    <style>
+      * {
+        font-family: calibri;
+      }
+      body {
+        background-image: url("../../static/library_website/images/background_darkened.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: black;
+        padding: 20px;
+        font-size: large;
+        align-items: center;
+      }
+
+      .bottom {
+        text-align: center;
+      }
+
+      .form {
+        color: black;
+        width: 50%;
+        padding: 20px;
+        margin: auto;
+        text-align: center;
+        background-color: rgba(255, 225, 189, 0.801);
+        font-size: larger;
+      }
+
+      .rowbreak {
+        height: 20px;
+      }
+      .submitButton {
+        height: 30px;
+        border: none;
+        background-color: rgb(138, 112, 64);
+        color: white;
+      }
+
+      .white {
+        color: white;
+      }
+    </style>
+  </head>
+  {% load crispy_forms_tags %}
+  <body>
+    <center>
+      <h1 class="white">Login</h1>
+    </center>
+
+    <form class="form" method="POST">
+      {% csrf_token %} {{loginForm|crispy}} {% if request.GET.next %}
+      <input type="hidden" name="next" value="{{ request.GET.next }}" />
+      {% endif %}
+      <div class="rowbreak"></div>
+      <button class="submitButton" type="submit">Login</button>
+    </form>
+    <center>
+      <p><a class="white" href="/">Back to home page</a></p>
+    </center>
+  </body>
+</html>

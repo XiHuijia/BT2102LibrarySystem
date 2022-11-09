@@ -1,0 +1,68 @@
+body {
+  background-image: url('./images/background.jpg');
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+}
+
+.LogIn {
+  text-align: right;
+  font-family: Arial;
+  padding: none;
+}
+
+.logInButton{
+  font-size: 50px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.signUpButton{
+  font-size: 50px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.Login_Heading {
+  text-align: center;
+  font-family: Arial;
+  padding-top: 100px;
+  font-size: 40px;
+}
+
+.Search_Book {
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+}
+
+.UerName_Box {
+  text-align: center;
+}
+#UserName_BoxContainer {
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+}
+
+.Password_Box {
+  padding-top: 20px;
+  text-align: center;
+}
+#Password_BoxContainer {
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+}
+
+.Confirm_Password_Box {
+  padding-top: 20px;
+  text-align: center;
+}
+
+#Confirm_Password_BoxContainer {
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+}

@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    font-family: calibri;
+    color: white;
+  }
+    
+  
+  body {
+    background-image: url('./images/background_darkened.png');
+    height: auto;
+    background-repeat: repeat-y;
+    background-size: cover;
+    padding: 0px;
+  }
+  
+  .left {
+    float: left;
+    width: 80%;
+    padding: 5px;
+  }
+  
+  .right {
+    float: right;
+    width: 20%;
+    padding: 5px;
+  }
+  
+  .rowbreak {
+    height: 5px;
+  }
+  
+  .toprow {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 80px;
+    width: 100%;
+  }
+    
+  .bottomrow {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 400px;
+    width: 100%;
+    padding: 10px;
+    font-size: large;
+  }
+  
+  .tableheader {
+    width: 20%;
+  }
+  
+  #detailsTable {
+    width: 100%;
+    height: 100%;
+  }
+  #header {
+    font-size: larger;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 40px;
+    }
+
+  .buttons {
+    height: 33%;
+    width: 100%;
+    font-size: large;
+    border: none;
+    margin: 5px;
+    background-color: rgb(78, 44, 16);
+  }
+  
+  #myAccountButton {
+    height: 100%;
+    width: 100%;
+    font-size: larger;
+  }    

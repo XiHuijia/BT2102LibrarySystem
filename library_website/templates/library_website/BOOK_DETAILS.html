@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'library_website/BOOK_DETAILS.css' %}" />
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div class="toprow" id="bookTitle"><b>Here is the information of the book found</b></div>
+
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+          <table id="detailsTable">
+
+            <tr>
+              <td class="tableHeader">Book ID (ISBN)</td>
+              <td id="bookID" name="bookID" >{{bookID}}</td>
+            </tr>
+              <tr>
+              <td class="tableHeader"> Author</td>
+              <td id="author">{{author}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Availability</td>
+              <td id="availability">(put availability here)</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Expected Due Date</td>
+              <td id="dueDate">(put duedate here)</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Publisher</td>
+              <td id="publisher">(put publisher here)</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Date of publication</td>
+              <td id="publicationDate">(put date of publication here)</td>
+            </tr>
+          </table>
+                  
+        <!--reserve function-->
+        <button id="reserveButton" class="buttons" onclick="document.location='reservedBookPage'">RESERVE</button>
+
+        <!--borrow function-->
+        <button id="borrowButton" class="buttons" onclick="document.location='borrowBookPage'">BORROW</button>
+
+        </div>
+      </div>
+
+      <div class= "queryResult" id="queryResult"  >
+	<p>{{resultOfBorrowing}}</p>
+  </div>
+      <div class="colbreak"></div>
+
+      <div class="column right">
+        <div class="toprow">
+          <button
+            class="buttons"
+            id="myAccountButton"
+            onclick="document.location='myAccount'"
+          >
+            MY ACCOUNT
+          </button>
+          <br />
+        </div>
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+          <center>
+            <a href="/">Search for books</a>
+          </center>
+      </div>
+    </div>
+  </body>
+</html>

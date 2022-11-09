@@ -1,0 +1,86 @@
+body {
+  background-image: url('./images/background.jpg');
+  background-repeat: no-repeat;
+  height: auto;
+  background-size: cover;
+  padding: 0px;
+}
+
+.buttons {
+    text-align: right;
+    padding: none;
+    height: 40px;
+  }
+
+
+
+.LogIn {
+  text-align: right;
+  font-family: Arial;
+  padding: none;
+}
+
+.logInButton{
+  font-size: 750px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.signUpButton{
+  font-size: 50px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.Univeristy_Heading {
+  text-align: center;
+  font-family: Arial;
+  padding-top: 20px;
+  font-size: 60px;
+}
+
+.Search_Book {
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+}
+
+.Search_Book_Box {
+  text-align: center;
+}
+#Search_Book_BoxContainer {
+  text-align: center;
+  font-family: Arial;
+  font-size: 60px;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.row {
+  float: left;
+  width: 30%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+.hey {
+  width: 60%;
+}
+
+.button {
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 35px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+

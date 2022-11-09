@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+  font-family: calibri;
+  color: white;
+}
+body {
+  background-image: url("./images/background_darkened.png");
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+}
+
+.left {
+  float: left;
+  width: 80%;
+  padding: 5px;
+}
+
+.right {
+  float: right;
+  width: 20%;
+  padding: 5px;
+}
+
+.rowbreak {
+  height: 5px;
+}
+
+.toprow {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 80px;
+  width: 100%;
+}
+
+.bottomrow {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 400px;
+  width: 100%;
+  padding: 10px;
+  font-size: large;
+}
+
+#header {
+  font-size: larger;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+}
+
+.buttons {
+  height: 50px;
+  width: 100%;
+  border: none;
+  background-color: rgb(138, 112, 64);
+}
+
+#myAccountButton {
+  height: 100%;
+  width: 100%;
+  font-size: larger;
+}

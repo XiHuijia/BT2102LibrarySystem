@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY ACCOUNT</title>
+    {% load static %}
+    <link
+      rel="stylesheet"
+      href="{% static 'library_website/styleMyAccount2.css' %}"
+    />
+    <!--what's changed: href="{% static 'library_website/styleMyAccount.css' %}-->
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div class="toprow" id="header">
+          <b>Member - Account details</b>
+        </div>
+        <div class="rowbreak"></div>
+
+        <div class="bottomrow" id="overview">
+          <table id="detailsTable">
+            <tr>
+              <th class="tableHeader" style="width: 5%">ID</th>
+              <th class="tableHeader" style="width: 30%">Reservations</th>
+              <th class="tableHeader" style="width: 5%">ID</th>
+              <th class="tableHeader" style="width: 30%">Loans</th>
+              <th class="tableHeader" style="width: 30%">Unpaid Fines</th>
+            </tr>
+            {% for row in inputData %}
+            <tr>
+              {% for cell in row %}
+              <td id="bookID">{{cell}}</td>
+              {% endfor%}
+            </tr>
+            {% endfor %}
+
+            <tr>
+              <td></td>
+              <td class="cell">
+                <form method="POST" action="cancelReservation">
+                  {% csrf_token %}
+                  <input
+                    id="cancelReservationBox"
+                    class="box"
+                    type="text"
+                    name="cancelReservation"
+                    placeholder="Enter book ID to cancel reservation"
+                  />
+                  <button class="buttons" type="submit">
+                    Cancel Reservation
+                  </button>
+                </form>
+              </td>
+              <td></td>
+              <td class="cell">
+                <form method="POST" action="returnBook">
+                  {% csrf_token %}
+                  <input
+                    id="returnBookBox"
+                    class="box"
+                    type="text"
+                    name="returnBook"
+                    placeholder="Enter book ID to return book"
+                  />
+                  <button class="buttons" type="submit">Return Book</button>
+                </form>
+
+                <form method="POST" action="extendReturn">
+                  {% csrf_token %}
+                  <input
+                    id="extendReservationBox"
+                    class="box"
+                    type="text"
+                    name="extendReturn"
+                    placeholder="Enter book ID to extend the due date"
+                  />
+                  <button class="buttons" type="submit">Extend Due Date</button>
+                </form>
+              </td>
+              <td class="cell">
+                <!-- <div id="statement">Please make payment here</div> -->
+                <button
+                  class="buttons"
+                  id="payFinesButton"
+                  onclick="document.location='memberPayFinesPage'"
+                >
+                  Make payment here
+                </button>
+              </td>
+            </tr>
+            <tr></tr>
+          </table>
+          <div>
+            <p>{{replyMessage}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="colbreak"></div>
+
+    <div class="column right">
+      <div class="toprow">
+        <button
+          class="buttons"
+          id="myAccountButton"
+          onclick="document.location='myAccount'"
+        >
+          MY ACCOUNT
+        </button>
+        <br />
+      </div>
+      <div class="rowbreak"></div>
+      <div class="bottomrow">
+        <center>
+          <a href="/">Search for books</a>
+        </center>
+      </div>
+    </div>
+  </body>
+</html>

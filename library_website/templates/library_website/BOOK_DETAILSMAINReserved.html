@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Details</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'library_website/BOOK_DETAILS.css' %}" />
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="column left">
+           <div class= "queryResult" id="queryResult"  >
+	<p>{{resultOfBorrowing}}</p>
+  </div>
+        <div class="toprow" id="bookTitle"><b>Here are the information of the book found</b></div>
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+             <table id="detailsTable">
+            <tr>
+              <td class="tableHeader">Book ID</td>
+              <td id="bookID">{{bookID}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Book Title</td>
+              <td id="title">{{title}}</td>
+            </tr>
+
+            <tr>
+              <td class="tableHeader"> Author(s)</td>
+              <td id="author">{{author}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Publisher(s)</td>
+              <td id="publisher">{{publisher}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Date of publication</td>
+              <td id="publicationDate">{{DateOfPublication}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Number of pages</td>
+              <td id="pageCount">{{numberOfPages}}</td>
+            </tr>
+              <tr>
+              <td class="tableHeader">Short Description</td>
+              <td id="shortDescription">{{shortDescription}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Long Description</td>
+              <td id="longDescription">{{longDescription}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Category</td>
+              <td id="bookID">{{category}}</td>
+            </tr>
+
+            <tr>
+              <td class="tableHeader">Availability</td>
+              <td id="availability">{{availability}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">Expected Due Date</td>
+              <td id="dueDate">{{dueDate}}</td>
+            </tr>
+            <tr>
+              <td class="tableHeader">(ISBN)</td>
+              <td id="ISBN">{{isbn}}</td>
+            </tr>
+          </table>
+                  
+        <!--reserve function-->
+        <button id="reserveButton" class="buttons" onclick="document.location='reservedBookPage'">RESERVE</button>
+
+        <!--borrow function-->
+        <button id="borrowButton" class="buttons" onclick="document.location='borrowBookPage'">BORROW</button>
+
+        </div>
+      </div>
+
+      <div class="colbreak"></div>
+
+      <div class="column right">
+        <div class="toprow">
+          <button
+            class="buttons"
+            id="myAccountButton"
+            onclick="document.location='myAccount'"
+          >
+            MY ACCOUNT
+          </button>
+          <br />
+        </div>
+        <div class="rowbreak"></div>
+        <div class="bottomrow">
+          <center>
+            <a href="/">Search for books</a>
+          </center>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Member Login</title>
+      {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'library_website/styleMemberLogin2.css' %}"  />
+  </head>
+  <body>
+    <center>
+      <div class="Login_Heading" id="Login_Heading">
+        <h1>Login</h1>
+      </div>
+
+      <div class="Username" id="UserName_Box">
+        <input
+          id="UserName_BoxContainer"
+          type="text"
+          placeholder="Username"
+          name="search"
+        />
+      </div>
+
+      <div class="Password_Box" id="Password_Box">
+        <input
+          id="Password_BoxContainer"
+          type="text"
+          placeholder="Password"
+          name="search"
+        />
+      </div>
+
+      <p>
+        <a href="signUp">Not a member yet? Click here to sign up.</a>
+        <p><a href="/">Click here to return to home page</a>.</p>
+      </p>
+    </center>
+  </body>
+</html>

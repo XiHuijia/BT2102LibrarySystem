@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Book Borrowings</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'library_website/styleAdminBorrowings.css' %}" />
+    <!--what's changed: href="{% static 'library_website/styleMyAccount.css' %}-->
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div class="toprow" id="header">
+          <b>All current book borrowings</b>
+        </div>
+        <div class="rowbreak"></div>
+
+        <div class="bottomrow" id="overview">
+           <table id="detailsTable">
+           {% for row in inputData %}
+            <tr>
+              <td id="bookID">{{row}}</td>
+            </tr>
+            {% endfor %}
+              </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="colbreak"></div>
+
+    <div class="column right">
+      <div class="toprow">
+        <button
+          class="buttons"
+          id="myAccountButton"
+          onclick="document.location='adminAccountPage'"
+        >
+          MY ACCOUNT
+        </button>
+        <br />
+      </div>
+      <div class="rowbreak"></div>
+      <div class="bottomrow">
+      </div>
+    </div>
+  </body>
+</html>

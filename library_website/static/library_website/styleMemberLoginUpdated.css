@@ -1,0 +1,94 @@
+* {
+  font-family: calibri;
+  text-align: center;
+  color: white;
+}
+
+body {
+  background-image: url('./images/background_darkened.png');
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 0px;
+}
+
+.LogIn {
+  text-align: right;
+  padding: none;
+}
+
+.logInButton{
+  font-size: 50px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.signUpButton{
+  font-size: 50px;
+  background-color: blue;
+  cursor: pointer;
+}
+
+.Login_Heading {
+  text-align: center;
+  padding-top: 20px;
+  font-size: 60px;
+}
+
+.Search_Book {
+  text-align: center;
+  font-size: 60px;
+}
+
+.Username, .Password_Box, .Confirm_Password_Box{
+  text-align: center;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#UserName_BoxContainer {
+  text-align: center;
+  font-size: 30px;
+  padding: 2px;
+  color: black;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+
+}
+
+#Password_BoxContainer {
+  text-align: center;
+  font-size: 30px;
+  color: black;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+
+}
+
+
+#Confirm_Password_BoxContainer {
+  text-align: center;
+  font-size: 40px;
+  color: black;
+  border: none;
+  border-radius: 25px 25px 25px 25px;
+
+}
+
+#createAccount {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+#logInButton {
+  background-color: rgb(138, 112, 64);
+  border: none;
+  font-size: 20px;
+  height: 50px;
+  width: 100px
+}

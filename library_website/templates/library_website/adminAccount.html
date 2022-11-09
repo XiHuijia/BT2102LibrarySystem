@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY ACCOUNT</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'library_website/styleAdminAccount1.css' %}" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="column left">
+        <div class="toprow" id="header">
+          <b>Admin (put admin username here)</b>
+        </div>
+        <div class="rowbreak"></div>
+
+        <div class="bottomrow" id="overview">
+            <p>Click to view:</p>
+          <table id="detailsTable">
+            <tr class="row">
+                <button
+                  class="buttons"
+                  id="borrowingsButton"
+                  onclick="document.location='adminBorrowPage'"
+                >
+                  All current book borrowings
+                </button>
+            </tr>
+            <tr class="row">
+                <button
+                  class="buttons"
+                  id="reservationsButton"
+                  onclick="document.location='adminReservationPage'"
+                >
+                  All current book reservations
+                </button>
+            </tr>
+            <tr class="row">
+                <button
+                  class="buttons"
+                  id="finesButton"
+                  onclick="document.location='adminFinesPage'"
+                >
+                  All users with unpaid fines
+                </button>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <div class="colbreak"></div>
+    <div class="column right">
+      <div class="toprow">
+        <button
+          
+          id="myAccountButton"
+          onclick="document.location='adminAccountPage'"
+        >
+          MY ACCOUNT
+        </button>
+        <div class="buttonbreak"></div>
+        <form action="logout" method="POST">
+          {% csrf_token %}
+          <button id="logOutButton" type="submit" >LOGOUT</button>
+        <br />
+      </div>
+      <div class="rowbreak"></div>
+       <div class="bottomrow">
+        </form>
+        </div> 
+    </div>
+  </body>
+</html>
